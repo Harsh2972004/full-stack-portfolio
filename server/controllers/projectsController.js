@@ -16,7 +16,7 @@ const getProjects = async (req, res) => {
 const createProject = async (req, res) => {
   const { title, description, techStack, github, liveLink } = req.body;
   let emptyFields = [];
-  console.log(req.body);
+
   if (!title) {
     emptyFields.push("title");
   }
@@ -56,14 +56,14 @@ const deleteProject = async (req, res) => {
   const { id } = req.params;
   try {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      res.status(404).json({ error: "project not found" });
+      return res.status(404).json({ error: "project not found" });
     }
 
     const project = await Project.findOneAndDelete({ _id: id });
     res.status(200).json({ message: "deleted successful" });
 
     if (!project) {
-      res.status(404).json({ error: "project not found" });
+      return res.status(404).json({ error: "project not found" });
     }
   } catch (err) {
     res.status(400).json({ error: err.message });

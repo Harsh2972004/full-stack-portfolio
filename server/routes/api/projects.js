@@ -8,19 +8,19 @@ const {
 const express = require("express");
 const router = express.Router();
 
-// @routes GET api/projects/
+// @routes GET projects/
 // @desc get all projects
 router.get("/", getProjects);
 
-// @routes POST api/projects/
+// @routes POST projects/
 // @desc add project
 router.post("/", createProject);
 
-// @routes DELETE api/projects/
+// @routes DELETE projects/
 // @desc delete project
 router.delete("/:id", deleteProject);
 
-// @routes PATCH api/projects/
+// @routes PATCH projects/
 // @desc update project
 router.patch("/:id", updateProject);
 

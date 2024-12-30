@@ -3,6 +3,7 @@
 const express = require("express");
 const cors = require("cors");
 const projectRouter = require("./routes/api/projects");
+const contactRouter = require("./routes/api/contact");
 const connectDB = require("./config/db");
 const bodyParser = require("body-parser");
 
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // use the routes module as the middleware
 // for the /api/projects path
 app.use("/projects", projectRouter);
+app.use("/contact", contactRouter);
 
 // connecting to MongoDB database
 connectDB();
