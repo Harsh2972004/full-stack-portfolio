@@ -1,34 +1,34 @@
 import "./navbar.css";
-import logo from "../../assets/images/logo-light.png";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import gsap from "gsap";
 
-const Navbar = ({ ref }) => {
-  const hoverRef = useRef();
-  const hoverEffect = () => {
-    useGSAP(() => {
-      gsap.to(".navbar-part2 a", {
-        scale: 1.2,
-        backgroundColor: "red",
-      });
+const Navbar = () => {
+  const mouseEnter = (e) => {
+    gsap.to(e.target, {
+      scale: 1.08,
+    });
+  };
+
+  const mouseLeave = (e) => {
+    gsap.to(e.target, {
+      scale: 1,
     });
   };
 
   return (
-    <nav ref={ref} className="navbar">
+    <nav className="navbar">
       <div className="navbar-part1">
         <h2>
           Harsh.<span>dev</span>
         </h2>
       </div>
       <div className="navbar-part2">
-        <a onMouseOver={hoverEffect} ref={hoverRef} href="#about">
+        <a onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} href="#about">
           About
         </a>
-        <a onMouseOver={hoverEffect} ref={hoverRef} href="#projects">
+        <a onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} href="#projects">
           Projects
         </a>
-        <a onMouseOver={hoverEffect} ref={hoverRef} href="#contact">
+        <a onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} href="#contact">
           Contact me
         </a>
       </div>

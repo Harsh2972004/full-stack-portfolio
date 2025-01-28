@@ -3,12 +3,8 @@ import Navbar from "../../components/navbar/Navbar";
 import HeroSection from "../../components/heroSection/HeroSection";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
 
 const Home = () => {
-  const heroRef = useRef();
-  const navbarRef = useRef();
-
   const timeline = gsap.timeline();
 
   useGSAP(() => {
@@ -74,8 +70,8 @@ const Home = () => {
 
   return (
     <section id="home">
-      <Navbar ref={navbarRef} />
-      <HeroSection ref={heroRef} />
+      <Navbar />
+      <HeroSection />
     </section>
   );
 };
