@@ -44,14 +44,9 @@
   border-radius: 30px;
   padding: 15px 28px;
   margin: 0 16px;
-  box-shadow: 2px 4px;
+  box-shadow: 2px 4px black;
   font-weight: 500;
   cursor: pointer;
-}
-
-.hero-heading button:hover {
-  scale: 1.1;
-  transition: all 0.2s;
 }
 
 .contact-button {

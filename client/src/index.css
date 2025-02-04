@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #aeea94;
+  --primary-color: #79d7be;
   --secondary-color: #2e5077;
   --container-padding: 2vw 4vw;
   --neue: "Neue";
@@ -20,6 +20,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
