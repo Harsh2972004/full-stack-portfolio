@@ -1,11 +1,11 @@
 .tech-stack {
   background-color: white;
-  width: 100%;
   box-shadow: 0 5px 5px 0 rgba(40, 36, 36, 0.654);
-  margin: 0 auto;
+  margin: var(--container-padding);
   margin-top: -120px;
   border-radius: 20px;
   padding: 4vw;
+  text-align: center;
 }
 
 .tech-stack-row1 {
